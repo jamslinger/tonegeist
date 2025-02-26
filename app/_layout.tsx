@@ -82,7 +82,7 @@ export default function RootLayout() {
         <Stack.Screen
           name='index'
           options={{
-            title: 'ToneHaunt',
+            title: 'ToneGeist',
             headerTitleStyle: {fontFamily: 'Regular'},
             headerLeft: () => (
               <View className={'pl-5'}>
