@@ -7,6 +7,7 @@ import {MoonStar} from "~/lib/icons/moonstar";
 import { Sun } from '~/lib/icons/sun';
 import {Link, Stack} from "expo-router";
 import {ArrowLeft} from "~/lib/icons/arrowLeft";
+import {Text} from "~/components/ui/text";
 
 export default function Settings() {
   const { colorScheme, setColorScheme, isDarkColorScheme } = useColorScheme();
@@ -28,8 +29,13 @@ export default function Settings() {
       <View className='flex-1 items-center gap-5 px-10 py-6 bg-secondary/30'>
         <Card className='w-full p-6 rounded-2xl'>
           <CardHeader>
-            <View className='flex-row items-center overflow-hidden gap-3'>
-              {isDarkColorScheme ? <MoonStar color={'white'} /> : <Sun />}<Switch checked={isDarkColorScheme} onCheckedChange={() => setColorScheme(colorScheme == 'dark' ? 'light' : 'dark')} />
+            <View className='flex-row items-center justify-between overflow-hidden gap-3'>
+              <Text style={{ color: isDarkColorScheme ? 'light' : 'dark'}}>
+                Dark Mode
+              </Text>
+              <View className='flex-row items-center justify-between overflow-hidden gap-3'>
+                {isDarkColorScheme ? <MoonStar color={'white'} /> : <Sun />}<Switch checked={isDarkColorScheme} onCheckedChange={() => setColorScheme(colorScheme == 'dark' ? 'light' : 'dark')} />
+              </View>
             </View>
           </CardHeader>
         </Card>
