@@ -26,11 +26,9 @@ export default function Chords() {
         headerTitleStyle: {fontFamily: 'Regular'},
         headerLeft: () => (
           <View className={'pl-3'}>
-            <Link href={'/'} asChild>
-              <Pressable onPress={router.back}>
-                <ArrowLeft color={isDarkColorScheme ? 'white' : 'black'}/>
-              </Pressable>
-            </Link>
+            <Pressable onPress={router.back}>
+              <ArrowLeft color={isDarkColorScheme ? 'white' : 'black'}/>
+            </Pressable>
           </View>
         )}}
       />

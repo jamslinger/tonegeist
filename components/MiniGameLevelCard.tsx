@@ -12,7 +12,7 @@ interface MiniGameLevelCardProps {
 
 export default function MiniGameLevelCard({ game, idx }: MiniGameLevelCardProps) {
   return (
-    <Link href={`/minigame/${game.name}/levels/${idx}`} asChild>
+    <Link href={`/minigame/${game.name}/levels/${idx}`}>
       <Card className='w-full p-6 rounded-2xl web:hover:bg-accent web:hover:text-accent-foreground'>
         <CardHeader>
           <View className='flex-row justify-between items-center overflow-hidden'>
